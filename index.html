@@ -14,12 +14,14 @@
     <input name="search" type="text" ng-model="search" />
     <table>
         <tr>
+            <th>#</th>
             <th>Название</th>
-            <th>еинавзаН</th>
+            <th>{{'Название' | reversed}}</th>
             <th>Кол-во</th>
             <th>Цена</th>
         </tr>
         <tr ng-repeat="good in goods | orderBy : '-name' | filter : {name:search}">
+            <td>{{$index+1}}</td>
             <td>{{good.name}}</td>
             <td>{{good.name | reversed}}</td>
             <td>{{good.count}}</td>
