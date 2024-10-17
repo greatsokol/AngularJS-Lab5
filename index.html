@@ -19,7 +19,7 @@
             <th>Кол-во</th>
             <th>Цена</th>
         </tr>
-        <tr ng-repeat="good in goods | orderBy : '-name' | filter : search">
+        <tr ng-repeat="good in goods | orderBy : '-name' | filter : {name:search}">
             <td>{{good.name}}</td>
             <td>{{good.name | reversed}}</td>
             <td>{{good.count}}</td>
